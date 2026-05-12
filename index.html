@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeSoft | Enterprise Laravel Modernization & SaaS Development</title>
+    <meta name="description"
+        content="Modernize legacy systems into scalable Laravel platforms using structured engineering and modern SaaS architecture.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Feather Icons -->
+    <script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- BACKGROUND MESH -->
+    <div class="bg-mesh"></div>
+    <div class="bg-grid"></div>
+
+    <!-- 1. PREMIUM NAVBAR -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="/" class="logo">
+                <svg xmlns="http://www.w3.org/2000/svg" width="157" height="31" viewBox="0 0 157 31" fill="none">
+                    <path
+                        d="M9.00322 5C9.75125 5.07683 11.0698 5.03626 11.8704 5.03653L17.1034 5.03676C17.2564 7.06034 17.1633 9.11251 17.2556 11.1412C17.2858 11.8058 17.3118 12.5378 17.2607 13.1974C15.3375 13.8168 15.8335 13.8889 14.7468 15.3813C14.429 15.8177 13.7514 16.2238 13.1985 16.7019C12.8457 17.007 12.8951 17.5807 13.3486 17.678C13.8701 17.7899 14.418 17.5928 14.9292 17.2855C15.4608 16.966 15.8695 16.4681 16.393 16.1521C16.5054 17.8047 16.3325 19.5537 16.512 21.2122C16.5231 21.3147 16.54 21.4041 16.5627 21.4876C16.6538 21.8239 16.9533 22.0917 17.2964 22.1126C17.8629 22.1474 17.8502 21.0716 17.8811 20.706C17.9383 20.0288 17.8453 19.361 17.9841 18.7004C18.0106 18.5741 18.0765 18.4644 18.1694 18.3817L18.273 18.4002C18.6052 18.9429 18.4663 21.5049 18.8008 22.2273C18.9432 22.5348 19.2735 22.5259 19.5252 22.3901C19.8026 22.0923 19.712 20.6831 19.7583 20.1981C19.8088 19.6682 19.752 19.1678 19.8968 18.6214C19.9791 18.52 19.9917 18.5119 20.1173 18.4803C20.4768 18.6304 20.0495 21.1156 20.3283 21.5403C20.3495 21.5725 20.3685 21.6017 20.3863 21.6291C20.5197 21.8342 20.7828 21.887 20.9995 21.7774C21.1426 21.7049 21.2478 21.571 21.2738 21.4108C21.4296 20.4488 21.2748 19.5528 21.4684 18.6168C21.4915 18.5051 21.5863 18.4635 21.6739 18.4265C22.1133 18.7563 21.3337 20.9318 22.2237 21.1268C22.644 21.2189 22.8378 19.5194 22.8385 19.2208C22.8423 17.5875 23.0149 15.6886 22.2712 14.1922C22.0987 13.8452 21.7727 13.6281 21.531 13.3411C20.9543 12.6841 21.1369 11.3258 21.1907 10.4791C21.3687 9.0176 21.2822 6.61763 21.3617 5.0313C23.8542 5.06343 26.4054 5.02131 28.9152 5.04003C28.9322 5.55584 28.9287 6.10895 28.9307 6.62745L28.9279 14.2208C28.9247 16.327 29.0317 18.7915 28.5885 20.8329C26.8064 29.0428 11.5493 28.9758 9.43821 21.1091C8.7748 18.637 8.95666 15.2299 8.96875 12.5998L9.00322 5Z"
+                        fill="#494D72" />
+                    <path
+                        d="M104 9.03992C105.331 9.17456 110.885 8.64984 111.669 9.49217C111.804 9.99672 111.655 10.6622 111.577 11.1953C109.96 11.2273 104.111 10.6182 103.128 11.6464C102.932 11.8519 102.817 12.1307 102.847 12.4146C103.092 14.743 108.267 12.5198 109.7 13.8578C110.083 14.215 110.192 14.7502 110.203 15.2506C110.238 16.85 109.291 20.8974 108.16 22.0481C107.249 22.9754 105.962 22.9553 104.751 22.9687C102.11 22.969 97.7123 23.0967 95.2002 22.8341C95.1702 21.7593 95.2547 20.9585 95.3734 19.8899C95.9997 20.3998 96.4094 20.6835 97.2375 20.7429C99.3259 20.8924 101.546 20.8155 103.637 20.8019C103.988 20.311 104.353 19.6477 104.103 19.0524C103.569 18.3967 102.763 18.4757 101.989 18.4839C100.678 18.498 99.3792 18.567 98.0777 18.4553C97.5944 18.4138 97.17 18.1346 96.9119 17.7289C96.7003 17.3961 96.6158 16.9993 96.6754 16.6108C97.0025 14.4801 97.5148 11.4887 98.8131 9.86714C99.4612 9.05763 100.778 9.11615 101.777 9.06511C102.204 9.03901 103.628 9.00237 104 9.03992Z"
+                        fill="#494D72" />
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M114.299 12.615C117.178 12.476 121.873 12.2979 124.604 13.1623C126.84 13.8708 124.694 19.8438 124.18 21.3921C123.969 22.0274 122.731 22.6559 122.088 22.8496C120.018 23.1142 113.71 23.0086 111.685 22.5622C111.434 22.3145 111.129 21.9499 110.888 21.6789C110.647 19.3252 111.421 14.5795 113.469 12.8944C113.587 12.798 114.12 12.6596 114.299 12.615ZM117.98 14.6684C117.566 14.7374 117.217 15.0172 117.074 15.4075C116.565 16.7928 116.142 18.2235 116 19.689C115.941 20.3085 116.442 20.8235 117.072 20.854C117.375 20.8686 117.677 20.881 117.967 20.8872L119.339 20.8986C119.746 19.2821 120.352 17.4696 120.562 15.7767C120.637 15.1652 120.154 14.6441 119.532 14.5997C119.214 14.5772 118.903 14.56 118.641 14.5585L117.98 14.6684Z"
+                        fill="#494D72" />
+                    <path
+                        d="M134.079 9.3044C134.958 9.28975 138.433 9.2404 139.065 9.4355C139.472 9.87207 139.433 10.5547 139.09 11.027C138.368 11.5602 137.091 10.7767 136.185 10.8449C135.281 10.9132 134.193 11.9509 134.285 13.0295H140.229L140.405 11.0876C141.93 10.9396 143.776 10.9246 145.333 10.8798C145.231 11.5284 145.139 12.3781 145.058 13.0295C145.599 13.0299 148.684 13.0295 148.684 13.0295C149.996 15.4162 145.838 14.8 144.575 14.7761C144.337 15.4073 144.111 16.0958 143.899 16.7362C143.63 17.5603 142.804 19.9346 143.244 20.5048C144.355 21.945 148.326 19.2365 146.889 22.9166C145.557 23.0479 143.203 22.9573 141.786 22.9383C139.996 22.8703 139.491 23.0482 138.273 21.6892C137.789 18.926 138.842 17.4281 139.15 14.7761C139.15 14.7761 135.36 14.7686 133.92 14.7761C132.858 16.6469 132.104 20.707 131.645 22.8525C130.021 23.0066 127.899 22.906 126.249 22.8628C126.71 21.268 128.078 16.0908 128.671 14.7761H126.638L126.762 13.0295H128.7C129.793 11.5436 129.555 10.515 130.889 9.53625C131.893 9.31599 133.042 9.32764 134.079 9.3044Z"
+                        fill="#494D72" />
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M84.7018 12.7154C86.9244 12.547 89.2841 12.6803 91.4988 12.8855C95.3501 13.2425 94.2719 15.8332 93.7743 18.4945C91.3534 18.3567 88.773 18.3886 86.3428 18.3835C85.6766 18.382 85.2464 18.5195 84.7041 18.889C83.1495 21.3734 87.7733 20.8516 88.9903 20.8239C89.9319 20.7986 91.5871 20.6406 92.3587 21.0454C92.6314 21.4054 92.5725 21.2326 92.5644 21.7049C91.758 23.1329 84.1529 22.2418 82.4211 22.3352C81.993 22.3584 81.1417 22.0715 80.5657 21.8498C80.3688 21.774 80.2226 21.6046 80.1919 21.3981C79.9051 19.5252 80.6408 15.7907 81.7228 14.1918C82.3895 13.207 83.5719 12.8796 84.7018 12.7154ZM87.2439 13.9422C86.6058 14.2055 86.3109 14.3288 85.8033 14.7964C85.6105 15.4156 85.3294 16.0008 85.6353 16.575C86.157 16.9981 87.204 16.8537 87.9143 16.8361C88.4055 16.8427 88.9438 16.9156 89.2152 16.5058C90.3346 14.8148 88.6602 13.9198 87.2439 13.9422Z"
+                        fill="#78C04D" />
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M53.0932 12.704C55.3833 12.5453 60.7081 12.4604 62.8031 13.2891C64.2538 13.8644 62.2036 20.2652 61.5874 21.2773C61.1268 22.0333 60.1795 22.2015 59.3409 22.3644C56.7831 22.6218 53.2939 22.4346 50.6786 22.3982C48.2773 22.1034 48.9059 19.2247 49.3291 17.7675C50.1255 15.0246 49.9867 13.2683 53.0932 12.704ZM59.1357 14.4288C57.8446 14.2598 56.9061 14.127 55.6074 14.209C55.4256 14.2577 54.8845 14.3877 54.8327 14.5262C54.3886 15.7201 53.1859 19.9265 53.431 20.9573C53.9914 21.3907 56.0763 20.9402 56.8318 20.8754C57.3416 20.8086 57.3334 20.8929 57.646 20.6069C58.0073 19.3311 58.9771 15.6454 59.1357 14.4288Z"
+                        fill="#78C04D" />
+                    <path
+                        d="M40.6344 9.17873C42.2115 9.0876 47.9344 9.00712 49.2746 9.17873C49.2868 9.70621 49.2122 10.5654 49.1784 11.1114C47.0454 11.2546 43.9075 10.6361 42.0656 11.4388C40.9958 13.6851 40.3852 16.5425 39.8023 18.9788C39.6563 19.5889 39.7461 20.1462 39.8585 20.7563C41.1679 20.8853 42.4211 20.8344 43.735 20.8124C44.5944 20.7984 45.4819 20.8118 46.3437 20.8142C46.1575 21.5269 46.0318 21.7544 45.6976 22.3953L45.631 22.4011C43.5033 22.5631 38.0008 22.4491 35.8631 22.2688C35.7083 22.1638 35.557 22.0533 35.41 21.9379C34.1179 20.917 35.8402 15.2507 36.2328 13.6869C37.0474 10.443 37.2739 9.42203 40.6344 9.17873Z"
+                        fill="#78C04D" />
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M80.1015 9.14037C79.8626 11.732 78.9594 14.5742 78.3858 17.1504C78.1278 18.3085 77.6515 20.8709 77.2726 21.8332C77.2053 22.8664 72.2 22.2887 72.1618 22.2843C71.4384 22.4592 68.6472 22.433 67.9214 22.4171C67.7337 22.4005 67.5576 22.3856 67.3912 22.3701C65.4195 22.1865 64.3366 20.261 64.7784 18.3537C65.1048 16.9455 65.587 15.5175 66.0173 14.4483C67.181 11.5578 72.5594 12.4631 74.7421 13.5753C75.1889 12.2463 75.648 10.4984 75.7881 9.13236L80.1015 9.14037ZM74.4298 14.4827C73.4404 14.2019 72.3492 13.8122 71.3332 13.9485C71.1507 14.0439 70.7919 14.2425 70.6808 14.3996C69.954 15.4284 68.7074 19.5818 69.2026 20.5606C69.6984 20.9827 71.5217 20.8614 72.283 20.9206C73.4114 20.4167 74.019 15.7919 74.4298 14.4827Z"
+                        fill="#78C04D" />
+                </svg>
+            </a>
+
+            <div class="nav-links">
+                <a href="#services">Services</a>
+                <a href="#transformation">Transformation</a>
+                <a href="#architecture">Architecture</a>
+                <a href="#process">Process</a>
+            </div>
+
+            <div class="nav-actions">
+                <a href="#audit" class="btn btn-secondary">Sign In</a>
+                <a href="#audit" class="btn btn-primary">Request Audit</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 2. HERO SECTION -->
+    <header class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="badge fade-up" style="--delay: 0.1s">
+                    <span class="badge-dot"></span>
+                    Enterprise System Modernization
+                </div>
+                <h1 class="hero-title fade-up" style="--delay: 0.2s">Transform Legacy Code into <br><span
+                        class="text-primary">Scalable SaaS</span></h1>
+                <p class="hero-subtitle fade-up" style="--delay: 0.3s">We modernize complex, outdated PHP monoliths into
+                    lightning-fast, secure Laravel architectures designed for global scale.</p>
+
+                <div class="hero-actions fade-up" style="--delay: 0.4s">
+                    <a href="#audit" class="btn btn-primary btn-large">Start Modernization Audit</a>
+                    <a href="#process" class="btn btn-ghost btn-large">Explore Process <i
+                            data-feather="arrow-right"></i></a>
+                </div>
+
+                <div class="trust-line fade-up" style="--delay: 0.5s">
+                    <div class="avatars">
+                        <img src="https://ui-avatars.com/api/?name=JS&background=f1f5f9&color=474c73&rounded=true"
+                            alt="User">
+                        <img src="https://ui-avatars.com/api/?name=AM&background=f8fafc&color=7dbe46&rounded=true"
+                            alt="User">
+                        <img src="https://ui-avatars.com/api/?name=RL&background=e0e7ff&color=474c73&rounded=true"
+                            alt="User">
+                    </div>
+                    <span>Trusted by CTOs at 50+ scaling enterprises</span>
+                </div>
+            </div>
+
+            <div class="hero-visual fade-up" style="--delay: 0.3s">
+                <div class="architecture-wrapper">
+                    <!-- Floating abstract elements -->
+                    <div class="float-el el-1">
+                        <i data-feather="database"></i>
+                        <span>Sync Active</span>
+                    </div>
+                    <div class="float-el el-2">
+                        <div class="pulse-ring"></div>
+                        <span>API Connected</span>
+                    </div>
+                    <div class="float-el el-3">
+                        <div class="code-snippet">
+                            <div class="c-line w-80"></div>
+                            <div class="c-line w-60"></div>
+                            <div class="c-line w-90 highlight"></div>
+                        </div>
+                    </div>
+
+                    <!-- Main Isometric Stack -->
+                    <div class="iso-stack">
+                        <div class="iso-layer layer-3">
+                            <div class="dash-ui">
+                                <div class="dash-top">
+                                    <div class="dot"></div>
+                                    <div class="dot"></div>
+                                    <div class="dot"></div>
+                                </div>
+                                <div class="dash-metrics">
+                                    <div class="d-box"></div>
+                                    <div class="d-box"></div>
+                                    <div class="d-box w-full"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="iso-layer layer-2">
+                            <div class="node-grid">
+                                <div class="n-item">API</div>
+                                <div class="n-item">Auth</div>
+                                <div class="n-item">Queue</div>
+                                <div class="n-item">Cache</div>
+                            </div>
+                        </div>
+                        <div class="iso-layer layer-1">
+                            <div class="db-cylinders">
+                                <div class="cyl"></div>
+                                <div class="cyl"></div>
+                                <div class="cyl"></div>
+                            </div>
+                        </div>
+                        <!-- Connection Lines -->
+                        <svg class="iso-connections" viewBox="0 0 400 400">
+                            <path class="flow-path" d="M200,300 L200,200 L150,150" />
+                            <path class="flow-path delay-1" d="M200,300 L200,200 L250,150" />
+                            <path class="flow-path delay-2" d="M150,150 L150,50" />
+                            <path class="flow-path delay-3" d="M250,150 L250,50" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- 3. TRUST STRIP -->
+    <section class="trust-strip">
+        <div class="container">
+            <p class="trust-text">Engineering infrastructure for high-growth platforms</p>
+            <div class="trust-logos">
+                <div class="logo-item"><i data-feather="server"></i> Enterprise Scale</div>
+                <div class="logo-item"><i data-feather="shield"></i> SOC2 Compliant</div>
+                <div class="logo-item"><i data-feather="cloud"></i> Cloud Native</div>
+                <div class="logo-item"><i data-feather="cpu"></i> Zero Downtime</div>
+                <div class="logo-item"><i data-feather="layers"></i> Modular Architecture</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. PROBLEMS VISUALIZATION -->
+    <section class="problems" id="problems">
+        <div class="container">
+            <div class="section-header text-center max-w-3xl mx-auto">
+                <h2 class="section-title">The Hidden Cost of Legacy Code</h2>
+                <p class="section-subtitle">Outdated monoliths don't just slow down your developers—they create security
+                    vulnerabilities and bottleneck your business growth.</p>
+            </div>
+
+            <div class="problem-bento">
+                <div class="bento-card large">
+                    <div class="bento-content">
+                        <div class="icon-box red"><i data-feather="alert-triangle"></i></div>
+                        <h3>Technical Debt Spiral</h3>
+                        <p>Years of quick patches create a fragile core that breaks easily when adding new features.</p>
+                    </div>
+                    <div class="bento-visual">
+                        <div class="spaghetti-code">
+                            <svg viewBox="0 0 200 100" class="tangle-svg">
+                                <path d="M10,50 Q40,10 70,50 T130,50 T190,50" stroke="#FF4D3F" fill="none"
+                                    stroke-width="3" opacity="0.5" />
+                                <path d="M10,20 Q60,90 100,50 T190,80" stroke="#FF4D3F" fill="none" stroke-width="2"
+                                    opacity="0.3" />
+                                <path d="M10,80 Q50,10 90,80 T190,20" stroke="#474C73" fill="none" stroke-width="2"
+                                    opacity="0.2" />
+                            </svg>
+                            <div class="error-badge">Critical System Error</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bento-card">
+                    <div class="icon-box orange"><i data-feather="clock"></i></div>
+                    <h3>Slow Feature Delivery</h3>
+                    <p>What should take days takes weeks due to tightly coupled spaghetti architecture.</p>
+                    <div class="mini-chart mt-4">
+                        <div class="bar-row"><span class="label">Legacy</span>
+                            <div class="bar red" style="width: 90%"></div>
+                        </div>
+                        <div class="bar-row"><span class="label">Modern</span>
+                            <div class="bar green" style="width: 20%"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bento-card">
+                    <div class="icon-box gray"><i data-feather="users"></i></div>
+                    <h3>Key-Person Risk</h3>
+                    <p>Only the original developers understand how to deploy or fix the system safely.</p>
+                    <div class="avatar-stack mt-4">
+                        <div class="avatar gray">?</div>
+                        <div class="avatar gray">?</div>
+                        <div class="avatar primary">Dev</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. LEGACY TO LARAVEL TRANSFORMATION -->
+    <section class="transformation" id="transformation">
+        <div class="container">
+            <h2 class="section-title text-center">Intelligent Modernization Pipeline</h2>
+
+            <div class="transform-pipeline">
+                <!-- Old State -->
+                <div class="pipe-stage old">
+                    <div class="stage-label text-muted">Current State</div>
+                    <div class="visual-box messy-box">
+                        <div class="monolith">
+                            <div class="m-block error"></div>
+                            <div class="m-block warn"></div>
+                            <div class="m-block"></div>
+                            <div class="m-block warn"></div>
+                        </div>
+                        <div class="floating-tag">PHP 5.6</div>
+                    </div>
+                    <h3>Fragile Monolith</h3>
+                    <p>Tightly coupled, untested, and hard to scale.</p>
+                </div>
+
+                <!-- AI Process -->
+                <div class="pipe-connection">
+                    <svg viewBox="0 0 100 20" class="flow-arrow">
+                        <path d="M0,10 L90,10 M80,0 L95,10 L80,20" fill="none" stroke="currentColor" stroke-width="2" />
+                    </svg>
+                </div>
+
+                <div class="pipe-stage process">
+                    <div class="stage-label text-accent">The Process</div>
+                    <div class="visual-box ai-box">
+                        <div class="ai-scanner">
+                            <div class="scan-line"></div>
+                            <i data-feather="cpu" class="core-icon"></i>
+                        </div>
+                        <div class="orbit orb-1"></div>
+                        <div class="orbit orb-2"></div>
+                    </div>
+                    <h3>Strangler Fig Migration</h3>
+                    <p>Zero-downtime, module-by-module extraction.</p>
+                </div>
+
+                <!-- New State -->
+                <div class="pipe-connection">
+                    <svg viewBox="0 0 100 20" class="flow-arrow">
+                        <path d="M0,10 L90,10 M80,0 L95,10 L80,20" fill="none" stroke="currentColor" stroke-width="2" />
+                    </svg>
+                </div>
+
+                <div class="pipe-stage new">
+                    <div class="stage-label text-green">Future State</div>
+                    <div class="visual-box clean-box">
+                        <div class="micro-grid">
+                            <div class="mc-node"><i data-feather="user"></i></div>
+                            <div class="mc-node"><i data-feather="credit-card"></i></div>
+                            <div class="mc-node"><i data-feather="bell"></i></div>
+                            <div class="mc-node"><i data-feather="database"></i></div>
+                        </div>
+                        <div class="floating-tag success">Laravel 11</div>
+                    </div>
+                    <h3>Modular Architecture</h3>
+                    <p>Clean, tested, and ready for high growth.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. AI-ASSISTED CODE ANALYSIS VISUAL -->
+    <section class="ai-analysis bg-alt">
+        <div class="container">
+            <div class="split-layout">
+                <div class="content-side">
+                    <div class="badge-pill mb-4"><i data-feather="zap"></i> Advanced Tooling</div>
+                    <h2 class="section-title">Automated Code Intelligence</h2>
+                    <p class="section-subtitle">We don't guess. We utilize advanced static analysis and AI-assisted
+                        mapping to decode your legacy application's true complexity before writing a single line of new
+                        code.</p>
+
+                    <ul class="check-list mt-6">
+                        <li><i data-feather="check-circle" class="text-green"></i> Deep dependency graph generation</li>
+                        <li><i data-feather="check-circle" class="text-green"></i> Automated security vulnerability
+                            detection</li>
+                        <li><i data-feather="check-circle" class="text-green"></i> Dead code isolation and removal</li>
+                        <li><i data-feather="check-circle" class="text-green"></i> Database schema relationship mapping
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="visual-side">
+                    <div class="ai-code-window">
+                        <div class="window-header">
+                            <div class="dots"><span class="r"></span><span class="y"></span><span class="g"></span>
+                            </div>
+                            <div class="title">analysis_engine.sh</div>
+                        </div>
+                        <div class="window-body relative">
+                            <div class="code-lines">
+                                <div class="line">class LegacyUserManager {</div>
+                                <div class="line bad"> public function doEverything($data) {</div>
+                                <div class="line bad"> mysql_query("SELECT * FROM users..."); // Warning: Deprecated
+                                </div>
+                                <div class="line"> $this->sendEmail();</div>
+                                <div class="line bad"> updateInventory(); // Error: Tight coupling</div>
+                                <div class="line"> }</div>
+                                <div class="line">}</div>
+                            </div>
+                            <!-- AI Overlay -->
+                            <div class="ai-overlay">
+                                <div class="ai-tooltip" style="top: 25px; right: 20px;">
+                                    <div class="tt-header"><i data-feather="alert-triangle"></i> Security Risk</div>
+                                    <div class="tt-body">SQL Injection vulnerable. Recommend Eloquent ORM.</div>
+                                </div>
+                                <div class="ai-tooltip" style="top: 85px; right: 20px;">
+                                    <div class="tt-header"><i data-feather="git-pull-request"></i> Architecture</div>
+                                    <div class="tt-body">Extract to Event/Listener pattern.</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. STICKY PROCESS SECTION -->
+    <section class="process" id="process">
+        <div class="container">
+            <h2 class="section-title text-center mb-12">The Modernization Lifecycle</h2>
+            <div class="process-wrapper">
+                <div class="process-nav">
+                    <div class="nav-step active" data-step="1">
+                        <div class="step-num">01</div>
+                        <div class="step-name">Audit & Discovery</div>
+                    </div>
+                    <div class="nav-step" data-step="2">
+                        <div class="step-num">02</div>
+                        <div class="step-name">Architecture Strategy</div>
+                    </div>
+                    <div class="nav-step" data-step="3">
+                        <div class="step-num">03</div>
+                        <div class="step-name">Phased Extraction</div>
+                    </div>
+                    <div class="nav-step" data-step="4">
+                        <div class="step-num">04</div>
+                        <div class="step-name">Testing & CI/CD</div>
+                    </div>
+                    <div class="nav-step" data-step="5">
+                        <div class="step-num">05</div>
+                        <div class="step-name">Scale & Support</div>
+                    </div>
+                    <div class="nav-line"></div>
+                </div>
+
+                <div class="process-content">
+                    <div class="process-panel active" id="step-1">
+                        <div class="panel-visual bg-gradient-mesh">
+                            <!-- Visual for Audit -->
+                            <div class="audit-graphic">
+                                <i data-feather="search" class="text-white w-16 h-16"></i>
+                                <div class="pulse-ring-large"></div>
+                            </div>
+                        </div>
+                        <div class="panel-text">
+                            <h3>Mapping the Unknown</h3>
+                            <p>We perform a comprehensive technical audit of your existing PHP application, mapping out
+                                dependencies, identifying security vulnerabilities, and establishing a baseline for the
+                                migration.</p>
+                        </div>
+                    </div>
+                    <!-- JS handles switching -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. INFRASTRUCTURE ARCHITECTURE SECTION -->
+    <section class="architecture bg-primary text-white" id="architecture">
+        <div class="container">
+            <div class="section-header text-center max-w-3xl mx-auto mb-12">
+                <h2 class="section-title text-white">Enterprise Laravel Architecture</h2>
+                <p class="section-subtitle text-slate-300">We build robust, multi-layered systems designed to handle
+                    millions of requests while remaining highly maintainable for your team.</p>
+            </div>
+
+            <div class="arch-diagram">
+                <!-- Level 1: Frontend/Clients -->
+                <div class="arch-level">
+                    <div class="level-label">Client Layer</div>
+                    <div class="arch-blocks row">
+                        <div class="a-block"><i data-feather="monitor"></i> Web App (Vue/React)</div>
+                        <div class="a-block"><i data-feather="smartphone"></i> Mobile Apps</div>
+                        <div class="a-block"><i data-feather="globe"></i> External APIs</div>
+                    </div>
+                </div>
+
+                <div class="arch-connector"><i data-feather="arrow-down"></i> REST / GraphQL <i
+                        data-feather="arrow-down"></i></div>
+
+                <!-- Level 2: API Gateway / Laravel -->
+                <div class="arch-level main-level">
+                    <div class="level-label">Laravel Core Services</div>
+                    <div class="arch-blocks grid">
+                        <div class="a-block outline"><i data-feather="shield"></i> Auth / Sanctum</div>
+                        <div class="a-block outline"><i data-feather="layers"></i> Routing / Controllers</div>
+                        <div class="a-block outline"><i data-feather="box"></i> Business Logic</div>
+                        <div class="a-block outline"><i data-feather="zap"></i> Event System</div>
+                    </div>
+                </div>
+
+                <div class="arch-connector"><i data-feather="arrow-down"></i></div>
+
+                <!-- Level 3: Data & Cloud -->
+                <div class="arch-level">
+                    <div class="level-label">Data & Infrastructure</div>
+                    <div class="arch-blocks row">
+                        <div class="a-block dark"><i data-feather="database"></i> PostgreSQL / MySQL</div>
+                        <div class="a-block dark"><i data-feather="server"></i> Redis Cache</div>
+                        <div class="a-block dark"><i data-feather="cloud"></i> AWS / Forge</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 10. SAAS DASHBOARD SHOWCASE -->
+    <section class="dashboard-showcase">
+        <div class="container text-center">
+            <h2 class="section-title">Beautiful UI meets Powerful Backend</h2>
+            <p class="section-subtitle max-w-2xl mx-auto mb-12">Your modernized backend deserves a world-class frontend.
+                We build premium administrative dashboards and user portals.</p>
+
+            <div class="dashboard-wrapper">
+                <div class="dash-image-container shadow-2xl">
+                    <!-- Pure CSS/HTML representation of a modern dashboard -->
+                    <div class="ui-mockup">
+                        <div class="ui-sidebar">
+                            <div class="ui-logo"></div>
+                            <div class="ui-nav-item active"></div>
+                            <div class="ui-nav-item"></div>
+                            <div class="ui-nav-item"></div>
+                        </div>
+                        <div class="ui-main">
+                            <div class="ui-topbar">
+                                <div class="ui-search"></div>
+                                <div class="ui-avatar"></div>
+                            </div>
+                            <div class="ui-content">
+                                <div class="ui-stats-row">
+                                    <div class="ui-stat-card">
+                                        <div class="mini-line"></div>
+                                    </div>
+                                    <div class="ui-stat-card">
+                                        <div class="mini-line"></div>
+                                    </div>
+                                    <div class="ui-stat-card">
+                                        <div class="mini-line"></div>
+                                    </div>
+                                </div>
+                                <div class="ui-chart-panel">
+                                    <div class="chart-bars">
+                                        <div class="cb" style="height: 40%"></div>
+                                        <div class="cb" style="height: 70%"></div>
+                                        <div class="cb" style="height: 50%"></div>
+                                        <div class="cb" style="height: 90%"></div>
+                                        <div class="cb" style="height: 30%"></div>
+                                        <div class="cb" style="height: 80%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Floating UI Cards over dashboard -->
+                <div class="float-card fc-1 shadow-lg">
+                    <div class="fc-header">Revenue MRR</div>
+                    <div class="fc-value text-green">+$24,500 <i data-feather="trending-up"></i></div>
+                </div>
+                <div class="float-card fc-2 shadow-lg">
+                    <div class="fc-header">System Health</div>
+                    <div class="fc-value text-primary">99.99% <i data-feather="check-circle"></i></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 11. OUTCOMES METRICS -->
+    <section class="outcomes bg-alt border-y">
+        <div class="container">
+            <div class="metrics-grid">
+                <div class="metric-item">
+                    <div class="metric-icon"><i data-feather="activity"></i></div>
+                    <div class="metric-data">
+                        <div class="metric-val">4x</div>
+                        <div class="metric-lbl">Faster Deployment Cycles</div>
+                    </div>
+                </div>
+                <div class="metric-item">
+                    <div class="metric-icon"><i data-feather="shield"></i></div>
+                    <div class="metric-data">
+                        <div class="metric-val">100%</div>
+                        <div class="metric-lbl">Codebase Security Audited</div>
+                    </div>
+                </div>
+                <div class="metric-item">
+                    <div class="metric-icon"><i data-feather="trending-down"></i></div>
+                    <div class="metric-data">
+                        <div class="metric-val">-80%</div>
+                        <div class="metric-lbl">Reduction in Technical Debt</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 13. FAQ SECTION -->
+    <section class="faq">
+        <div class="container faq-container">
+            <h2 class="section-title text-center mb-10">Modernization Questions</h2>
+            <div class="accordion">
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        Will migration affect our daily business operations?
+                        <i data-feather="chevron-down"></i>
+                    </button>
+                    <div class="accordion-content">
+                        <p>No. We utilize the Strangler Fig architectural pattern. This means we build the new Laravel
+                            system alongside your old system, slowly routing traffic to the new modules as they are
+                            completed. You experience zero downtime.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        How long does a typical modernization take?
+                        <i data-feather="chevron-down"></i>
+                    </button>
+                    <div class="accordion-content">
+                        <p>Depending on complexity, a phased modernization takes between 3 to 9 months. However, because
+                            we use an iterative approach, you will see functional improvements and ROI in the first 4
+                            weeks.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        Do you maintain the system after launch?
+                        <i data-feather="chevron-down"></i>
+                    </button>
+                    <div class="accordion-content">
+                        <p>Yes. We offer dedicated engineering retainers to act as your extended team, handling ongoing
+                            maintenance, security patching, and new SaaS feature development.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 14. FINAL CTA -->
+    <section class="final-cta" id="audit">
+        <div class="cta-glow"></div>
+        <div class="container text-center relative z-10">
+            <h2 class="cta-title">Ready to leave legacy code behind?</h2>
+            <p class="cta-subtitle">Get a comprehensive codebase audit and modernization roadmap.</p>
+            <form class="cta-form">
+                <input type="email" placeholder="Enter your work email" class="cta-input" required>
+                <button type="submit" class="btn btn-primary btn-large">Request Technical Audit</button>
+            </form>
+            <div class="cta-trust mt-4">
+                <i data-feather="lock" class="inline w-4 h-4 mr-1"></i> 100% Secure & Confidential. NDA available.
+            </div>
+        </div>
+    </section>
+
+    <!-- 15. FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="/" class="logo footer-logo">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="157" height="31" viewBox="0 0 157 31"
+                            fill="none">
+                            <path
+                                d="M9.00322 5C9.75125 5.07683 11.0698 5.03626 11.8704 5.03653L17.1034 5.03676C17.2564 7.06034 17.1633 9.11251 17.2556 11.1412C17.2858 11.8058 17.3118 12.5378 17.2607 13.1974C15.3375 13.8168 15.8335 13.8889 14.7468 15.3813C14.429 15.8177 13.7514 16.2238 13.1985 16.7019C12.8457 17.007 12.8951 17.5807 13.3486 17.678C13.8701 17.7899 14.418 17.5928 14.9292 17.2855C15.4608 16.966 15.8695 16.4681 16.393 16.1521C16.5054 17.8047 16.3325 19.5537 16.512 21.2122C16.5231 21.3147 16.54 21.4041 16.5627 21.4876C16.6538 21.8239 16.9533 22.0917 17.2964 22.1126C17.8629 22.1474 17.8502 21.0716 17.8811 20.706C17.9383 20.0288 17.8453 19.361 17.9841 18.7004C18.0106 18.5741 18.0765 18.4644 18.1694 18.3817L18.273 18.4002C18.6052 18.9429 18.4663 21.5049 18.8008 22.2273C18.9432 22.5348 19.2735 22.5259 19.5252 22.3901C19.8026 22.0923 19.712 20.6831 19.7583 20.1981C19.8088 19.6682 19.752 19.1678 19.8968 18.6214C19.9791 18.52 19.9917 18.5119 20.1173 18.4803C20.4768 18.6304 20.0495 21.1156 20.3283 21.5403C20.3495 21.5725 20.3685 21.6017 20.3863 21.6291C20.5197 21.8342 20.7828 21.887 20.9995 21.7774C21.1426 21.7049 21.2478 21.571 21.2738 21.4108C21.4296 20.4488 21.2748 19.5528 21.4684 18.6168C21.4915 18.5051 21.5863 18.4635 21.6739 18.4265C22.1133 18.7563 21.3337 20.9318 22.2237 21.1268C22.644 21.2189 22.8378 19.5194 22.8385 19.2208C22.8423 17.5875 23.0149 15.6886 22.2712 14.1922C22.0987 13.8452 21.7727 13.6281 21.531 13.3411C20.9543 12.6841 21.1369 11.3258 21.1907 10.4791C21.3687 9.0176 21.2822 6.61763 21.3617 5.0313C23.8542 5.06343 26.4054 5.02131 28.9152 5.04003C28.9322 5.55584 28.9287 6.10895 28.9307 6.62745L28.9279 14.2208C28.9247 16.327 29.0317 18.7915 28.5885 20.8329C26.8064 29.0428 11.5493 28.9758 9.43821 21.1091C8.7748 18.637 8.95666 15.2299 8.96875 12.5998L9.00322 5Z"
+                                fill="#494D72" />
+                            <path
+                                d="M104 9.03992C105.331 9.17456 110.885 8.64984 111.669 9.49217C111.804 9.99672 111.655 10.6622 111.577 11.1953C109.96 11.2273 104.111 10.6182 103.128 11.6464C102.932 11.8519 102.817 12.1307 102.847 12.4146C103.092 14.743 108.267 12.5198 109.7 13.8578C110.083 14.215 110.192 14.7502 110.203 15.2506C110.238 16.85 109.291 20.8974 108.16 22.0481C107.249 22.9754 105.962 22.9553 104.751 22.9687C102.11 22.969 97.7123 23.0967 95.2002 22.8341C95.1702 21.7593 95.2547 20.9585 95.3734 19.8899C95.9997 20.3998 96.4094 20.6835 97.2375 20.7429C99.3259 20.8924 101.546 20.8155 103.637 20.8019C103.988 20.311 104.353 19.6477 104.103 19.0524C103.569 18.3967 102.763 18.4757 101.989 18.4839C100.678 18.498 99.3792 18.567 98.0777 18.4553C97.5944 18.4138 97.17 18.1346 96.9119 17.7289C96.7003 17.3961 96.6158 16.9993 96.6754 16.6108C97.0025 14.4801 97.5148 11.4887 98.8131 9.86714C99.4612 9.05763 100.778 9.11615 101.777 9.06511C102.204 9.03901 103.628 9.00237 104 9.03992Z"
+                                fill="#494D72" />
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M114.299 12.615C117.178 12.476 121.873 12.2979 124.604 13.1623C126.84 13.8708 124.694 19.8438 124.18 21.3921C123.969 22.0274 122.731 22.6559 122.088 22.8496C120.018 23.1142 113.71 23.0086 111.685 22.5622C111.434 22.3145 111.129 21.9499 110.888 21.6789C110.647 19.3252 111.421 14.5795 113.469 12.8944C113.587 12.798 114.12 12.6596 114.299 12.615ZM117.98 14.6684C117.566 14.7374 117.217 15.0172 117.074 15.4075C116.565 16.7928 116.142 18.2235 116 19.689C115.941 20.3085 116.442 20.8235 117.072 20.854C117.375 20.8686 117.677 20.881 117.967 20.8872L119.339 20.8986C119.746 19.2821 120.352 17.4696 120.562 15.7767C120.637 15.1652 120.154 14.6441 119.532 14.5997C119.214 14.5772 118.903 14.56 118.641 14.5585L117.98 14.6684Z"
+                                fill="#494D72" />
+                            <path
+                                d="M134.079 9.3044C134.958 9.28975 138.433 9.2404 139.065 9.4355C139.472 9.87207 139.433 10.5547 139.09 11.027C138.368 11.5602 137.091 10.7767 136.185 10.8449C135.281 10.9132 134.193 11.9509 134.285 13.0295H140.229L140.405 11.0876C141.93 10.9396 143.776 10.9246 145.333 10.8798C145.231 11.5284 145.139 12.3781 145.058 13.0295C145.599 13.0299 148.684 13.0295 148.684 13.0295C149.996 15.4162 145.838 14.8 144.575 14.7761C144.337 15.4073 144.111 16.0958 143.899 16.7362C143.63 17.5603 142.804 19.9346 143.244 20.5048C144.355 21.945 148.326 19.2365 146.889 22.9166C145.557 23.0479 143.203 22.9573 141.786 22.9383C139.996 22.8703 139.491 23.0482 138.273 21.6892C137.789 18.926 138.842 17.4281 139.15 14.7761C139.15 14.7761 135.36 14.7686 133.92 14.7761C132.858 16.6469 132.104 20.707 131.645 22.8525C130.021 23.0066 127.899 22.906 126.249 22.8628C126.71 21.268 128.078 16.0908 128.671 14.7761H126.638L126.762 13.0295H128.7C129.793 11.5436 129.555 10.515 130.889 9.53625C131.893 9.31599 133.042 9.32764 134.079 9.3044Z"
+                                fill="#494D72" />
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M84.7018 12.7154C86.9244 12.547 89.2841 12.6803 91.4988 12.8855C95.3501 13.2425 94.2719 15.8332 93.7743 18.4945C91.3534 18.3567 88.773 18.3886 86.3428 18.3835C85.6766 18.382 85.2464 18.5195 84.7041 18.889C83.1495 21.3734 87.7733 20.8516 88.9903 20.8239C89.9319 20.7986 91.5871 20.6406 92.3587 21.0454C92.6314 21.4054 92.5725 21.2326 92.5644 21.7049C91.758 23.1329 84.1529 22.2418 82.4211 22.3352C81.993 22.3584 81.1417 22.0715 80.5657 21.8498C80.3688 21.774 80.2226 21.6046 80.1919 21.3981C79.9051 19.5252 80.6408 15.7907 81.7228 14.1918C82.3895 13.207 83.5719 12.8796 84.7018 12.7154ZM87.2439 13.9422C86.6058 14.2055 86.3109 14.3288 85.8033 14.7964C85.6105 15.4156 85.3294 16.0008 85.6353 16.575C86.157 16.9981 87.204 16.8537 87.9143 16.8361C88.4055 16.8427 88.9438 16.9156 89.2152 16.5058C90.3346 14.8148 88.6602 13.9198 87.2439 13.9422Z"
+                                fill="#78C04D" />
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M53.0932 12.704C55.3833 12.5453 60.7081 12.4604 62.8031 13.2891C64.2538 13.8644 62.2036 20.2652 61.5874 21.2773C61.1268 22.0333 60.1795 22.2015 59.3409 22.3644C56.7831 22.6218 53.2939 22.4346 50.6786 22.3982C48.2773 22.1034 48.9059 19.2247 49.3291 17.7675C50.1255 15.0246 49.9867 13.2683 53.0932 12.704ZM59.1357 14.4288C57.8446 14.2598 56.9061 14.127 55.6074 14.209C55.4256 14.2577 54.8845 14.3877 54.8327 14.5262C54.3886 15.7201 53.1859 19.9265 53.431 20.9573C53.9914 21.3907 56.0763 20.9402 56.8318 20.8754C57.3416 20.8086 57.3334 20.8929 57.646 20.6069C58.0073 19.3311 58.9771 15.6454 59.1357 14.4288Z"
+                                fill="#78C04D" />
+                            <path
+                                d="M40.6344 9.17873C42.2115 9.0876 47.9344 9.00712 49.2746 9.17873C49.2868 9.70621 49.2122 10.5654 49.1784 11.1114C47.0454 11.2546 43.9075 10.6361 42.0656 11.4388C40.9958 13.6851 40.3852 16.5425 39.8023 18.9788C39.6563 19.5889 39.7461 20.1462 39.8585 20.7563C41.1679 20.8853 42.4211 20.8344 43.735 20.8124C44.5944 20.7984 45.4819 20.8118 46.3437 20.8142C46.1575 21.5269 46.0318 21.7544 45.6976 22.3953L45.631 22.4011C43.5033 22.5631 38.0008 22.4491 35.8631 22.2688C35.7083 22.1638 35.557 22.0533 35.41 21.9379C34.1179 20.917 35.8402 15.2507 36.2328 13.6869C37.0474 10.443 37.2739 9.42203 40.6344 9.17873Z"
+                                fill="#78C04D" />
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M80.1015 9.14037C79.8626 11.732 78.9594 14.5742 78.3858 17.1504C78.1278 18.3085 77.6515 20.8709 77.2726 21.8332C77.2053 22.8664 72.2 22.2887 72.1618 22.2843C71.4384 22.4592 68.6472 22.433 67.9214 22.4171C67.7337 22.4005 67.5576 22.3856 67.3912 22.3701C65.4195 22.1865 64.3366 20.261 64.7784 18.3537C65.1048 16.9455 65.587 15.5175 66.0173 14.4483C67.181 11.5578 72.5594 12.4631 74.7421 13.5753C75.1889 12.2463 75.648 10.4984 75.7881 9.13236L80.1015 9.14037ZM74.4298 14.4827C73.4404 14.2019 72.3492 13.8122 71.3332 13.9485C71.1507 14.0439 70.7919 14.2425 70.6808 14.3996C69.954 15.4284 68.7074 19.5818 69.2026 20.5606C69.6984 20.9827 71.5217 20.8614 72.283 20.9206C73.4114 20.4167 74.019 15.7919 74.4298 14.4827Z"
+                                fill="#78C04D" />
+                        </svg>
+                    </a>
+                    <p class="mt-4 text-muted">Engineering reliable, scalable, and secure SaaS architectures for the
+                        modern web.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Solutions</h4>
+                    <a href="#">Legacy Modernization</a>
+                    <a href="#">Laravel Development</a>
+                    <a href="#">SaaS Architecture</a>
+                    <a href="#">API Integration</a>
+                </div>
+                <div class="footer-links">
+                    <h4>Company</h4>
+                    <a href="#">Case Studies</a>
+                    <a href="#">Our Process</a>
+                    <a href="#">About Us</a>
+                    <a href="#">Contact</a>
+                </div>
+                <div class="footer-links">
+                    <h4>Connect</h4>
+                    <a href="#">LinkedIn</a>
+                    <a href="#">Twitter (X)</a>
+                    <a href="#">GitHub</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 UCodeSoft, Inc. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            if (window.feather) feather.replace();
+        });
+    </script>
+</body>
+
+</html>
