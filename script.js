@@ -103,4 +103,44 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    // --- WOW REVEAL ---
+    const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('active');
+                revealObserver.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.scroll-reveal, .fade-up').forEach(el => revealObserver.observe(el));
+
+    // --- ORB PARALLAX ---
+    document.addEventListener('mousemove', (e) => {
+        const orbs = document.querySelectorAll('.bg-orb');
+        const x = (e.clientX / window.innerWidth - 0.5) * 40;
+        const y = (e.clientY / window.innerHeight - 0.5) * 40;
+        orbs.forEach((orb, i) => {
+            orb.style.transform = `translate(${x * (i + 1)}px, ${y * (i + 1)}px)`;
+        });
+    });
+
+    // --- MAGNETIC BUTTONS ---
+    const magneticBtns = document.querySelectorAll('.btn-primary, .btn-secondary');
+    magneticBtns.forEach(btn => {
+        btn.addEventListener('mousemove', (e) => {
+            const rect = btn.getBoundingClientRect();
+            const x = e.clientX - rect.left - rect.width / 2;
+            const y = e.clientY - rect.top - rect.height / 2;
+            btn.style.transform = `translate(${x * 0.3}px, ${y * 0.3}px)`;
+        });
+        btn.addEventListener('mouseleave', () => {
+            btn.style.transform = `translate(0, 0)`;
+        });
+    });
+
+    // Initial icon replacement
+    if (window.feather) {
+        feather.replace();
+    }
 });

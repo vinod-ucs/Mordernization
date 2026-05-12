@@ -21,8 +21,11 @@
 </head>
 
 <body>
-    <!-- BACKGROUND MESH -->
+    <!-- BACKGROUND EFFECTS -->
     <div class="bg-mesh"></div>
+    <div class="bg-grid"></div>
+    <div class="bg-orb orb-1"></div>
+    <div class="bg-orb orb-2"></div>
     <div class="bg-grid"></div>
 
     <!-- 1. PREMIUM NAVBAR -->
@@ -81,7 +84,8 @@
                 </div>
                 <h1 class="hero-title fade-up" style="--delay: 0.2s">Transform Legacy Code into <br><span
                         class="text-primary">Scalable SaaS</span></h1>
-                <p class="hero-subtitle fade-up" style="--delay: 0.3s">We modernize complex, outdated PHP monoliths into
+                <p class="hero-subtitle fade-up " style="--delay: 0.3s">We modernize complex, outdated PHP
+                    monoliths into
                     lightning-fast, secure Laravel architectures designed for global scale.</p>
 
                 <div class="hero-actions fade-up" style="--delay: 0.4s">
@@ -103,7 +107,7 @@
                 </div>
             </div>
 
-            <div class="hero-visual fade-up" style="--delay: 0.3s">
+            <div class="hero-visual fade-up scroll-reveal" style="--delay: 0.3s">
                 <div class="architecture-wrapper">
                     <!-- Floating abstract elements -->
                     <div class="float-el el-1">
@@ -121,6 +125,11 @@
                             <div class="c-line w-90 highlight"></div>
                         </div>
                     </div>
+
+                    <!-- Extra Floating Chips for WOW -->
+                    <div class="floating-chip chip-1"><i data-feather="zap"></i> +400% Perf</div>
+                    <div class="floating-chip chip-2"><i data-feather="shield"></i> SOC2 Ready</div>
+                    <div class="floating-chip chip-3"><i data-feather="layers"></i> Scalable</div>
 
                     <!-- Main Isometric Stack -->
                     <div class="iso-stack">
@@ -167,15 +176,36 @@
     </header>
 
     <!-- 3. TRUST STRIP -->
-    <section class="trust-strip">
-        <div class="container">
-            <p class="trust-text">Engineering infrastructure for high-growth platforms</p>
+    <section class="trust-strip relative overflow-hidden">
+        <div class="trust-bg-glow"></div>
+        <div class="trust-grid-overlay"></div>
+
+        <div class="container relative z-10">
+            <h2 class="section-title text-center">Engineering infrastructure for high-growth platforms</h2>
+            <p class="text-center text-muted mb-10">We build secure, scalable SaaS architectures that support enterprise
+                growth without
+                technical debt</p>
             <div class="trust-logos">
-                <div class="logo-item"><i data-feather="server"></i> Enterprise Scale</div>
-                <div class="logo-item"><i data-feather="shield"></i> SOC2 Compliant</div>
-                <div class="logo-item"><i data-feather="cloud"></i> Cloud Native</div>
-                <div class="logo-item"><i data-feather="cpu"></i> Zero Downtime</div>
-                <div class="logo-item"><i data-feather="layers"></i> Modular Architecture</div>
+                <div class="logo-item">
+                    <div class="li-icon"><i data-feather="server"></i></div>
+                    <div class="li-text">Enterprise Scale</div>
+                </div>
+                <div class="logo-item">
+                    <div class="li-icon"><i data-feather="shield"></i></div>
+                    <div class="li-text">SOC2 Compliant</div>
+                </div>
+                <div class="logo-item">
+                    <div class="li-icon"><i data-feather="cloud"></i></div>
+                    <div class="li-text">Cloud Native</div>
+                </div>
+                <div class="logo-item">
+                    <div class="li-icon"><i data-feather="cpu"></i></div>
+                    <div class="li-text">Zero Downtime</div>
+                </div>
+                <div class="logo-item">
+                    <div class="li-icon"><i data-feather="layers"></i></div>
+                    <div class="li-text">Modular Architecture</div>
+                </div>
             </div>
         </div>
     </section>
@@ -243,8 +273,7 @@
     <section class="transformation" id="transformation">
         <div class="container">
             <h2 class="section-title text-center">Intelligent Modernization Pipeline</h2>
-
-            <div class="transform-pipeline">
+            <div class="transform-pipeline scroll-reveal">
                 <!-- Old State -->
                 <div class="pipe-stage old">
                     <div class="stage-label text-muted">Current State</div>
@@ -256,6 +285,7 @@
                             <div class="m-block warn"></div>
                         </div>
                         <div class="floating-tag">PHP 5.6</div>
+                        <div class="connection-line-glow"></div>
                     </div>
                     <h3>Fragile Monolith</h3>
                     <p>Tightly coupled, untested, and hard to scale.</p>
@@ -263,9 +293,12 @@
 
                 <!-- AI Process -->
                 <div class="pipe-connection">
-                    <svg viewBox="0 0 100 20" class="flow-arrow">
-                        <path d="M0,10 L90,10 M80,0 L95,10 L80,20" fill="none" stroke="currentColor" stroke-width="2" />
-                    </svg>
+                    <div class="data-flow">
+                        <div class="particle p-1"></div>
+                        <div class="particle p-2"></div>
+                        <div class="particle p-3"></div>
+                        <div class="flow-line"></div>
+                    </div>
                 </div>
 
                 <div class="pipe-stage process">
@@ -284,9 +317,12 @@
 
                 <!-- New State -->
                 <div class="pipe-connection">
-                    <svg viewBox="0 0 100 20" class="flow-arrow">
-                        <path d="M0,10 L90,10 M80,0 L95,10 L80,20" fill="none" stroke="currentColor" stroke-width="2" />
-                    </svg>
+                    <div class="data-flow">
+                        <div class="particle p-1"></div>
+                        <div class="particle p-2"></div>
+                        <div class="particle p-3"></div>
+                        <div class="flow-line"></div>
+                    </div>
                 </div>
 
                 <div class="pipe-stage new">
@@ -295,13 +331,13 @@
                         <div class="micro-grid">
                             <div class="mc-node"><i data-feather="user"></i></div>
                             <div class="mc-node"><i data-feather="credit-card"></i></div>
-                            <div class="mc-node"><i data-feather="bell"></i></div>
-                            <div class="mc-node"><i data-feather="database"></i></div>
+                            <div class="mc-node"><i data-feather="settings"></i></div>
+                            <div class="mc-node"><i data-feather="activity"></i></div>
                         </div>
-                        <div class="floating-tag success">Laravel 11</div>
+                        <div class="floating-tag success">Modern Laravel</div>
                     </div>
-                    <h3>Modular Architecture</h3>
-                    <p>Clean, tested, and ready for high growth.</p>
+                    <h3>Cloud-Native SaaS</h3>
+                    <p>Scalable, modular, and enterprise-ready.</p>
                 </div>
             </div>
         </div>
@@ -348,6 +384,7 @@
                             </div>
                             <!-- AI Overlay -->
                             <div class="ai-overlay">
+                                <div class="ai-scanner-bar"></div>
                                 <div class="ai-tooltip" style="top: 25px; right: 20px;">
                                     <div class="tt-header"><i data-feather="alert-triangle"></i> Security Risk</div>
                                     <div class="tt-body">SQL Injection vulnerable. Recommend Eloquent ORM.</div>
@@ -365,7 +402,7 @@
     </section>
 
     <!-- 8. STICKY PROCESS SECTION -->
-    <section class="process" id="process">
+    <section class="process padding-tb-8rem" id="process">
         <div class="container">
             <h2 class="section-title text-center mb-12">The Modernization Lifecycle</h2>
             <div class="process-wrapper">
@@ -416,17 +453,18 @@
     </section>
 
     <!-- 5. INFRASTRUCTURE ARCHITECTURE SECTION -->
-    <section class="architecture bg-primary text-white" id="architecture">
+    <section class="architecture text-white" id="architecture">
         <div class="container">
             <div class="section-header text-center max-w-3xl mx-auto mb-12">
                 <h2 class="section-title text-white">Enterprise Laravel Architecture</h2>
-                <p class="section-subtitle text-slate-300">We build robust, multi-layered systems designed to handle
+                <p class="section-subtitle color-white text-slate-300">We build robust, multi-layered systems designed
+                    to handle
                     millions of requests while remaining highly maintainable for your team.</p>
             </div>
 
             <div class="arch-diagram">
                 <!-- Level 1: Frontend/Clients -->
-                <div class="arch-level">
+                <div class="arch-level primary">
                     <div class="level-label">Client Layer</div>
                     <div class="arch-blocks row">
                         <div class="a-block"><i data-feather="monitor"></i> Web App (Vue/React)</div>
@@ -474,41 +512,46 @@
             <div class="dashboard-wrapper">
                 <div class="dash-image-container shadow-2xl">
                     <!-- Pure CSS/HTML representation of a modern dashboard -->
-                    <div class="ui-mockup">
-                        <div class="ui-sidebar">
-                            <div class="ui-logo"></div>
-                            <div class="ui-nav-item active"></div>
-                            <div class="ui-nav-item"></div>
-                            <div class="ui-nav-item"></div>
+                    <div class="premium-dashboard scroll-reveal">
+                        <div class="db-sidebar">
+                            <div class="db-logo-small"></div>
+                            <div class="db-nav-item active"></div>
+                            <div class="db-nav-item"></div>
+                            <div class="db-nav-item"></div>
                         </div>
-                        <div class="ui-main">
-                            <div class="ui-topbar">
-                                <div class="ui-search"></div>
-                                <div class="ui-avatar"></div>
+                        <div class="db-main">
+                            <div class="db-header">
+                                <div class="db-search"></div>
+                                <div class="db-user"></div>
                             </div>
-                            <div class="ui-content">
-                                <div class="ui-stats-row">
-                                    <div class="ui-stat-card">
-                                        <div class="mini-line"></div>
-                                    </div>
-                                    <div class="ui-stat-card">
-                                        <div class="mini-line"></div>
-                                    </div>
-                                    <div class="ui-stat-card">
-                                        <div class="mini-line"></div>
-                                    </div>
+                            <div class="db-stats">
+                                <div class="db-card-mini">
+                                    <div class="val">99.9%</div>
+                                    <div class="lbl">Uptime</div>
                                 </div>
-                                <div class="ui-chart-panel">
-                                    <div class="chart-bars">
-                                        <div class="cb" style="height: 40%"></div>
-                                        <div class="cb" style="height: 70%"></div>
-                                        <div class="cb" style="height: 50%"></div>
-                                        <div class="cb" style="height: 90%"></div>
-                                        <div class="cb" style="height: 30%"></div>
-                                        <div class="cb" style="height: 80%"></div>
-                                    </div>
+                                <div class="db-card-mini">
+                                    <div class="val">120ms</div>
+                                    <div class="lbl">Avg Latency</div>
                                 </div>
                             </div>
+                            <div class="db-chart-box">
+                                <svg viewBox="0 0 400 150" class="chart-svg">
+                                    <path d="M0,150 Q50,130 100,100 T200,80 T300,40 T400,20" fill="none"
+                                        stroke="var(--secondary)" stroke-width="4" />
+                                    <path d="M0,150 Q50,130 100,100 T200,80 T300,40 T400,20 V150 H0 Z"
+                                        fill="url(#grad-chart)" opacity="0.1" />
+                                    <defs>
+                                        <linearGradient id="grad-chart" x1="0%" y1="0%" x2="0%" y2="100%">
+                                            <stop offset="0%" style="stop-color:var(--secondary);stop-opacity:1" />
+                                            <stop offset="100%" style="stop-color:var(--secondary);stop-opacity:0" />
+                                        </linearGradient>
+                                    </defs>
+                                </svg>
+                                <div class="chart-marker"></div>
+                            </div>
+                        </div>
+                        <div class="floating-badge-success">
+                            <i data-feather="check"></i> Modern Architecture Verified
                         </div>
                     </div>
                 </div>
