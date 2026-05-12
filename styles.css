@@ -1696,6 +1696,10 @@ section {
 .process-wrapper {
     display: flex;
     gap: 4rem;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-items: center;
+    
 }
 
 .process-nav {
@@ -1723,8 +1727,9 @@ section {
     gap: 1.5rem;
     padding: 1.5rem 0;
     cursor: pointer;
-    opacity: 0.5;
+    opacity: 1;
     transition: all 0.3s;
+    left: -34px;
 }
 
 .nav-step.active {
@@ -1732,16 +1737,16 @@ section {
 }
 
 .step-num {
-    width: 32px;
-    height: 32px;
+    width: 80px;
+    height: 80px;
     background: var(--bg-alt);
     border: 2px solid var(--border);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 0.8rem;
-    font-weight: bold;
+    font-size: 1.2rem;
+    font-weight: normal;
     transition: all 0.3s;
 }
 
