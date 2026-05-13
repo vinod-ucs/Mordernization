@@ -483,50 +483,96 @@
         </div>
     </section>
 
-    <!-- 5. INFRASTRUCTURE ARCHITECTURE SECTION -->
-    <section class="architecture text-white" id="architecture">
+    <!-- 5. ENTERPRISE ARCHITECTURE (REDESIGNED) -->
+    <section class="architecture" id="architecture" role="region" aria-labelledby="arch-title">
         <div class="container">
-            <div class="section-header text-center max-w-3xl mx-auto mb-12">
-                <h2 class="section-title text-white">Enterprise Laravel Architecture</h2>
-                <p class="section-subtitle color-white text-slate-300">We build robust, multi-layered systems designed
-                    to handle
-                    millions of requests while remaining highly maintainable for your team.</p>
+            <div class="section-header text-center max-w-3xl mx-auto mb-8">
+                <h2 id="arch-title" class="section-title">Enterprise Laravel Architecture</h2>
+                <p class="section-subtitle">Practical architecture patterns and practices for secure, observable,
+                    multi-tenant Laravel platforms.</p>
             </div>
 
-            <div class="arch-diagram">
-                <!-- Level 1: Frontend/Clients -->
-                <div class="arch-level primary">
-                    <div class="level-label">Client Layer</div>
-                    <div class="arch-blocks row">
-                        <div class="a-block"><i data-feather="monitor"></i> Web App (Vue/React)</div>
-                        <div class="a-block"><i data-feather="smartphone"></i> Mobile Apps</div>
-                        <div class="a-block"><i data-feather="globe"></i> External APIs</div>
+            <div class="arch-grid">
+                <div class="arch-left">
+                    <h3 class="arch-heading">Design Goals</h3>
+                    <ul class="arch-list">
+                        <li><i data-feather="check-circle" class="text-green" aria-hidden="true"></i>
+                            <span>Zero-downtime module extraction</span>
+                        </li>
+                        <li><i data-feather="check-circle" class="text-green" aria-hidden="true"></i>
+                            <span>API-first service boundaries</span>
+                        </li>
+                        <li><i data-feather="check-circle" class="text-green" aria-hidden="true"></i>
+                            <span>Observability, tracing and SLOs</span>
+                        </li>
+                        <li><i data-feather="check-circle" class="text-green" aria-hidden="true"></i>
+                            <span>Secure-by-default auth &amp; RBAC</span>
+                        </li>
+                    </ul>
+
+                    <div class="arch-cta mt-6">
+                        <a href="#process" class="btn btn-ghost" aria-label="See our modernization process">See our
+                            modernization process</a>
                     </div>
                 </div>
 
-                <div class="arch-connector"><i data-feather="arrow-down"></i> REST / GraphQL <i
-                        data-feather="arrow-down"></i></div>
+                <div class="arch-center" aria-hidden="false">
+                    <div class="arch-visual" role="img" aria-label="Architecture flow: API gateway to core services to data and infrastructure">
+                        <article class="arch-card arch-api" role="group" aria-labelledby="ac-api">
+                            <h4 id="ac-api" class="ac-title">API Gateway</h4>
+                            <p class="ac-desc">Routing, rate-limiting, contract validation and ingress policies.</p>
+                        </article>
 
-                <!-- Level 2: API Gateway / Laravel -->
-                <div class="arch-level main-level">
-                    <div class="level-label">Laravel Core Services</div>
-                    <div class="arch-blocks grid">
-                        <div class="a-block outline"><i data-feather="shield"></i> Auth / Sanctum</div>
-                        <div class="a-block outline"><i data-feather="layers"></i> Routing / Controllers</div>
-                        <div class="a-block outline"><i data-feather="box"></i> Business Logic</div>
-                        <div class="a-block outline"><i data-feather="zap"></i> Event System</div>
+                        <div class="arch-connector-visual" aria-hidden="true">
+                            <svg width="32" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 4v12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                <path d="M7 11l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg>
+                        </div>
+
+                        <article class="arch-card arch-core" role="group" aria-labelledby="ac-core">
+                            <h4 id="ac-core" class="ac-title">Domain Services</h4>
+                            <p class="ac-desc">Domain-driven modules, events, workers and isolation boundaries.</p>
+                        </article>
+
+                        <div class="arch-connector-visual" aria-hidden="true">
+                            <svg width="32" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 4v12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                <path d="M7 11l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg>
+                        </div>
+
+                        <article class="arch-card arch-data" role="group" aria-labelledby="ac-data">
+                            <h4 id="ac-data" class="ac-title">Data &amp; Infrastructure</h4>
+                            <p class="ac-desc">Transactional DB, analytics store, cache, queues and cloud infra.</p>
+                        </article>
                     </div>
                 </div>
 
-                <div class="arch-connector"><i data-feather="arrow-down"></i></div>
+                <div class="arch-right">
+                    <h3 class="arch-heading">Patterns &amp; Practices</h3>
+                    <ul class="arch-practices">
+                        <li>
+                            <span class="pp-keyword">Event-driven</span>
+                            <span class="pp-description">Decoupled change propagation</span>
+                        </li>
+                        <li>
+                            <span class="pp-keyword">Contracts &amp; Tests</span>
+                            <span class="pp-description">API contract testing for safe refactor</span>
+                        </li>
+                        <li>
+                            <span class="pp-keyword">CI/CD</span>
+                            <span class="pp-description">Pipelines with canary releases and feature flags</span>
+                        </li>
+                        <li>
+                            <span class="pp-keyword">Observability</span>
+                            <span class="pp-description">Distributed tracing, logs and dashboards</span>
+                        </li>
+                    </ul>
 
-                <!-- Level 3: Data & Cloud -->
-                <div class="arch-level">
-                    <div class="level-label">Data & Infrastructure</div>
-                    <div class="arch-blocks row">
-                        <div class="a-block dark"><i data-feather="database"></i> PostgreSQL / MySQL</div>
-                        <div class="a-block dark"><i data-feather="server"></i> Redis Cache</div>
-                        <div class="a-block dark"><i data-feather="cloud"></i> AWS / Forge</div>
+                    <div class="arch-links mt-6">
+                        <a href="#case-studies" class="btn btn-primary" aria-label="Explore case studies">Explore case
+                            studies</a>
                     </div>
                 </div>
             </div>
@@ -671,6 +717,59 @@
     </section>
 
     <!-- 14. FINAL CTA -->
+    <!-- 12. CASE STUDIES -->
+    <section class="case-studies" id="case-studies">
+        <div class="container">
+            <h2 class="section-title text-center">Case Studies</h2>
+            <p class="section-subtitle text-center mb-8">Selected modernization outcomes from recent engagements.</p>
+
+            <div class="case-grid">
+                <div class="case-card">
+                    <div class="case-meta">
+                        <div class="case-logo">Client A</div>
+                        <div class="case-role">FinTech</div>
+                    </div>
+                    <h3>Monolith → Modular SaaS</h3>
+                    <p>Modernized payments platform into modular Laravel services, reduced release friction and
+                        simplified ops.</p>
+                    <ul class="case-metrics">
+                        <li><strong>+4x</strong> Deployment speed</li>
+                        <li><strong>-70%</strong> Incident rate</li>
+                    </ul>
+                </div>
+
+                <div class="case-card">
+                    <div class="case-meta">
+                        <div class="case-logo">Client B</div>
+                        <div class="case-role">Marketplace</div>
+                    </div>
+                    <h3>API-First Refactor</h3>
+                    <p>Extracted critical APIs, introduced contract tests and CI pipelines to ensure safe iteration.</p>
+                    <ul class="case-metrics">
+                        <li><strong>+60%</strong> API throughput</li>
+                        <li><strong>-50%</strong> Time-to-restore</li>
+                    </ul>
+                </div>
+
+                <div class="case-card">
+                    <div class="case-meta">
+                        <div class="case-logo">Client C</div>
+                        <div class="case-role">SaaS</div>
+                    </div>
+                    <h3>Performance & Security Lift</h3>
+                    <p>Re-platformed core services on Laravel, implemented caching and hardened auth flows.</p>
+                    <ul class="case-metrics">
+                        <li><strong>+400%</strong> Performance improvements</li>
+                        <li><strong>100%</strong> Security audit pass</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="case-cta text-center mt-8">
+                <a href="#audit" class="btn btn-primary">Request a similar audit</a>
+            </div>
+        </div>
+    </section>
     <section class="final-cta" id="audit">
         <div class="cta-glow"></div>
         <div class="container text-center relative z-10">
