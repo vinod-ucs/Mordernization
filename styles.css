@@ -1,3 +1,377 @@
+/* CASE STUDIES */
+.case-studies {
+    background: var(--card);
+    padding: 6rem 0;
+}
+
+.case-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--gap-lg);
+    margin-top: 2.5rem;
+}
+
+.case-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 2rem;
+    box-shadow: var(--shadow-md);
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.case-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-xl);
+}
+
+.case-meta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 0.75rem;
+}
+
+.case-logo {
+    background: var(--bg-alt);
+    color: var(--primary);
+    padding: 0.5rem 0.75rem;
+    border-radius: 8px;
+    font-weight: 800;
+}
+
+.case-role {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    font-weight: 600;
+}
+
+.case-card h3 {
+    font-size: 1.25rem;
+    margin-top: 0.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.case-card p {
+    color: var(--text-muted);
+    margin-bottom: 1rem;
+}
+
+.case-metrics {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+}
+
+.case-metrics li {
+    background: var(--bg-alt);
+    padding: 0.45rem 0.75rem;
+    border-radius: 999px;
+    font-weight: 700;
+    color: var(--text-main);
+    font-size: 0.95rem;
+}
+
+.case-cta {
+    margin-top: 2rem;
+}
+
+@media (max-width: 1024px) {
+    .case-grid {
+    grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 640px) {
+    .case-grid {
+    grid-template-columns: 1fr;
+    }
+    .container { padding: 0 1.25rem; }
+    .case-studies { padding: 4rem 0; }
+}
+
+/* ARCHITECTURE REDESIGN - PREMIUM SaaS STYLING */
+.architecture {
+    position: relative;
+    padding: 8rem 0;
+    overflow: hidden;
+    background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 25%, #312e81 50%, #2d1b69 75%, #1e1a4b 100%);
+}
+
+.architecture::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: 
+        radial-gradient(circle at 20% 50%, rgba(79, 70, 229, 0.15) 0%, transparent 40%),
+        radial-gradient(circle at 80% 50%, rgba(6, 182, 212, 0.12) 0%, transparent 40%),
+        radial-gradient(circle at 50% 100%, rgba(125, 190, 70, 0.08) 0%, transparent 30%);
+    pointer-events: none;
+    z-index: 0;
+}
+
+.architecture::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: 
+        linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+        linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+    background-size: 60px 60px;
+    pointer-events: none;
+    z-index: 0;
+    opacity: 0.5;
+    mask-image: radial-gradient(circle at center, transparent 0%, black 50%);
+}
+
+.architecture .container {
+    position: relative;
+    z-index: 1;
+}
+
+.architecture .section-title {
+    color: white;
+    font-size: 3.5rem;
+    font-weight: 900;
+    margin-bottom: 1rem;
+    letter-spacing: -0.05em;
+    background: linear-gradient(135deg, white 0%, #e0e7ff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.architecture .section-subtitle {
+    color: rgba(226, 232, 240, 0.8);
+    font-size: 1.2rem;
+    line-height: 1.8;
+}
+
+.arch-grid {
+    display: grid;
+    grid-template-columns: 1fr 520px 1fr;
+    gap: 4rem;
+    align-items: center;
+    margin-top: 4rem;
+}
+
+.arch-left, .arch-right {
+    padding: 1.5rem 0;
+}
+
+.arch-heading {
+    font-size: 1.4rem;
+    margin-bottom: 1.5rem;
+    font-weight: 900;
+    color: white;
+    letter-spacing: -0.02em;
+}
+
+.arch-list, .arch-practices {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.arch-list li, .arch-practices li {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    color: rgba(226, 232, 240, 0.85);
+    font-weight: 500;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.arch-list i {
+    flex-shrink: 0;
+    width: 20px;
+    height: 20px;
+    margin-top: 2px;
+    color: var(--secondary);
+    filter: drop-shadow(0 0 8px var(--secondary));
+}
+
+.arch-practices {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem !important;
+}
+
+.arch-practices li {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 1.25rem;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-left: 3px solid var(--secondary);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.arch-practices li:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-left-color: #8FD56F;
+    box-shadow: 0 0 20px rgba(125, 190, 70, 0.15);
+    transform: translateX(4px);
+}
+
+.pp-keyword {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--secondary);
+    font-weight: 900;
+    font-size: 0.95rem;
+    letter-spacing: -0.01em;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+}
+
+.pp-description {
+    display: block;
+    color: rgba(226, 232, 240, 0.8);
+    font-weight: 500;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.arch-visual {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    position: relative;
+}
+
+.arch-card {
+    width: 100%;
+    max-width: 520px;
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: var(--radius-lg);
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 
+        0 8px 32px rgba(0, 0, 0, 0.3),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1),
+        0 0 20px rgba(79, 70, 229, 0.1);
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.arch-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 50% 0%, rgba(79, 70, 229, 0.1), transparent 60%);
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.arch-card:hover {
+    background: rgba(255, 255, 255, 0.12);
+    border-color: rgba(125, 190, 70, 0.4);
+    box-shadow: 
+        0 20px 60px rgba(0, 0, 0, 0.4),
+        inset 0 1px 0 rgba(255, 255, 255, 0.15),
+        0 0 40px rgba(125, 190, 70, 0.2);
+    transform: translateY(-4px);
+}
+
+.arch-card:hover::before {
+    opacity: 1;
+}
+
+.arch-card .ac-title {
+    font-weight: 900;
+    font-size: 1.3rem;
+    margin-bottom: 0.75rem;
+    color: white;
+    letter-spacing: -0.01em;
+}
+
+.arch-card .ac-desc {
+    color: rgba(226, 232, 240, 0.8);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.arch-connector-visual {
+    font-size: 1.2rem;
+    color: var(--secondary);
+    animation: flowPulse 2s ease-in-out infinite;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    margin: 0 auto;
+}
+
+.arch-connector-visual svg {
+    width: 32px;
+    height: 24px;
+    stroke: var(--secondary);
+    filter: drop-shadow(0 0 10px var(--secondary));
+    animation: flowArrow 1.5s ease-in-out infinite;
+}
+
+@keyframes flowPulse {
+    0%, 100% { opacity: 0.6; }
+    50% { opacity: 1; }
+}
+
+@keyframes flowArrow {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(4px); }
+}
+
+.arch-cta, .arch-links {
+    margin-top: 2rem;
+}
+
+.arch-cta .btn, .arch-links .btn {
+    position: relative;
+    overflow: hidden;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+}
+
+.arch-links .btn-primary {
+    background: linear-gradient(135deg, var(--secondary), #6ca63d);
+    color: #020617;
+    border: 1px solid rgba(125, 190, 70, 0.3);
+    box-shadow: 0 0 20px rgba(125, 190, 70, 0.3);
+    transition: all 0.3s ease;
+}
+
+.arch-links .btn-primary:hover {
+    box-shadow: 0 0 40px rgba(125, 190, 70, 0.5), 0 20px 40px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
+    background: linear-gradient(135deg, #8FD56F, var(--secondary));
+}
+
+@media (max-width: 1100px) {
+    .arch-grid { 
+        grid-template-columns: 1fr; 
+        gap: 2.5rem;
+    }
+    .arch-center { order: 2; }
+    .arch-left { order: 1; }
+    .arch-right { order: 3; }
+    .arch-visual { max-width: 100%; }
+    .architecture { padding: 6rem 0; }
+    .architecture .section-title { font-size: 2.5rem; }
+}
 :root {
     /* COLOR SYSTEM - PREMIUM SaaS */
     --bg: #F8FAFC;
